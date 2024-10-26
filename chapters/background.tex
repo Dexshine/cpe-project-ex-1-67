@@ -1,7 +1,7 @@
 \chapter{\ifenglish Background Knowledge and Theory\else ทฤษฎีที่เกี่ยวข้อง\fi}
 
 การทำโครงงานนี้ ผู้จัดทำได้ศึกษาทฤษฎีและเทคโนโลยีที่เกี่ยวข้องกับการสร้างเว็บแอปพลิเคชัน
-แบ่งได้เป็น 3 ส่วน
+แบ่งได้เป็น 4 ส่วน ดังนี้
 \section{ด้าน Frontend}
 \subsection{HTML}
 HTML คือ Hypertext Markup Language ซึ่งเป็นภาษาคอมพิวเตอร์ที่ใช้ในการสร้างและกำหนดโครงสร้างของเว็บไซต์ โดย HTML จะใช้ แท็ก (Tags) เพื่อจัดระเบียบเนื้อหา เช่น ข้อความ, รูปภาพ และลิงก์บนหน้าเว็บ 
@@ -15,24 +15,39 @@ JavaScript คือภาษาคอมพิวเตอร์ที่มี
 \cite{javascript1}\cite{javascript2}
 \subsection{React}
 React คือ JavaScript Library ที่พัฒนาโดย Facebook (ปัจจุบันคือ Meta) ใช้สำหรับการสร้าง User Interfaces โดยเฉพาะอย่างยิ่งในรูปแบบของ components ซึ่งเป็นบล็อกของโค้ดที่สามารถนำกลับมาใช้ใหม่ได้
-เพื่อช่วยให้การพัฒนาเว็บแอปพลิเคชันมีประสิทธิภาพและง่ายมากขึ้น\cite{react1}\cite{react2}
+เพื่อช่วยให้การพัฒนาเว็บแอปพลิเคชันมีประสิทธิภาพและง่ายมากขึ้น \cite{react1}\cite{react2}
 \subsection{Material UI}
 Material UI คือ React component library ที่พัฒนาโดยชุมชน Open-source ซึ่งใช้หลักการออกแบบของ Google's Material Design เพื่อ
-สร้างส่วนประกอบ UI ที่สวยงามและใช้งานง่ายสำหรับแอปพลิเคชัน React\cite{mui}\cite{mui2}
+สร้างส่วนประกอบ UI ที่สวยงามและใช้งานง่ายสำหรับแอปพลิเคชัน React \cite{mui}\cite{mui2}
 \section{ด้าน Backend}
 \subsection{JSON}
+JSON (JavaScript Object Notation) เป็นมาตรฐานในการแลกเปลี่ยนข้อมูลที่มีน้ำหนักเบาและเข้าใจง่าย ถูกพัฒนาขึ้นในช่วงต้นยุค 2000
+JSON ได้รับความนิยมอย่างสูงในงานด้านการพัฒนา API และเว็บแอปพลิเคชัน เนื่องจากสามารถใช้งานได้ง่ายทั้งฝั่งเซิร์ฟเวอร์และไคลเอนต์ \cite{json}
+\subsection{REST API}
+REST API (Representational State Transfer Application Programming Interface) เป็นสถาปัตยกรรมที่ใช้ในการพัฒนาเว็บ API โดยมีหลักการ
+และแนวทางที่ช่วยให้การสื่อสารระหว่างระบบต่างๆ เป็นไปอย่างมีประสิทธิภาพและยืดหยุ่น REST API ใช้ HTTP (Hypertext Transfer Protocol) ในการทำงาน ซึ่งช่วยให้สามารถเข้าถึงและจัดการ
+ทรัพยากรต่างๆบนเซิร์ฟเวอร์ได้ \cite{restapi} 
 \subsection{NodeJS}
+NodeJS คือ สิ่งที่ทำหน้าที่เป็น JavaScript Runtime(ตัวแปรภาษา JavaScript ให้เป็นภาษาเครื่อง) โดย NodeJS จะทำให้ JavaScript ที่เคย run อยู่แค่ใน Browser เท่านั้น สามารถนำไป run
+บน Server ได้ เมื่อภาษาที่ใช้ทั้งฝั่ง Server และ Client เหมือนกัน ทำให้การพัฒนาเว็บไซต์เป็นไปด้วยความรวดเร็ว \cite{node1}\cite{node2}
 \subsection{ExpressJS}
+ExpressJS คือ Framework สำหรับพัฒนาเว็บ ที่ทำงานบน NodeJS ซึ่งช่วยให้การสร้างแอปพลิเคชันและ API เป็นไปได้อย่างรวดเร็ว โดยมีคุณสมบัติเด่นหลายประการ เช่น ระบบการจัดการเส้นทาง (Routing), 
+ฟังก์ชัน Middleware, การจัดการข้อผิดพลาด ทำให้ผู้พัฒนาสามารถสร้างแอปพลิเคชันที่มีความซับซ้อนสูงได้อย่างมีประสิทธิภาพ \cite{express1}\cite{express2}
 \subsection{Mongoose}
-
+Mongoose คือ Object Data Modeling (ODM) Library สำหรับ MongoDB ที่ทำงานบน NodeJS โดยช่วยในการจัดการความสัมพันธ์ระหว่างข้อมูล, การตรวจสอบโครงสร้างข้อมูล (schema validation) เป็นต้น \cite{mongoose}
 \section{ด้าน Database}
 \subsection{NoSQL}
+NoSQL คือ แนวทางการออกแบบฐานข้อมูล ที่มุ่งเน้นการจัดเก็บและเรียกใช้ข้อมูลในรูปแบบที่ไม่ใช่ตาราง ซึ่งแตกต่างจากฐานข้อมูลเชิงสัมพันธ์ (Relational Database) ที่ใช้โครงสร้างตารางแบบดั้งเดิม
+มักจะเหมาะสำหรับการจัดการข้อมูลขนาดใหญ่และไม่เป็นระเบียบ (Unstructured Data) เช่น ข้อมูลจากโซเชียลมีเดีย, IoT, และแอปพลิเคชันที่ต้องการการตอบสนองแบบเรียลไทม์ \cite{nosql}
 \subsection{MongoDB}
+์MongoDB คือฐานข้อมูลแบบ NoSQL ที่มีลักษณะการจัดเก็บข้อมูลในรูปแบบเอกสาร (Document-Oriented) โดยใช้โครงสร้างที่คล้ายกับ JSON ซ฿่งช่วยให้การจัดการข้อมูลมีความยืดหยุ่นและสามารถปรับขนาดได้ง่าย \cite{mongodb}
 
 \section{ด้าน Authentication}
-\subsection{JWT Token}
+\subsection{JWT}
+JWT (JSON Web Token) คือ มาตรฐานที่ใช้สำหรับการส่งข้อมูลระหว่างสองฝ่ายในรูปแบบ JSON โดยข้อมูลที่ส่งจะถูกตรวจสอบและเชื่อถือได้เนื่องจากมีการลงรายมือชื่อดิจิทัล (digital signature) ซึ่งสามารถทำได้โดยใช้กุญแจลับ (secret)
+JWT ถูกออกแบบมาให้ใช้งานได้ในหลายบริบท โดยบทบาทเด่นคือ การตรวจสอบสิทธิ์ (authentication) และการมอบสิทธิ์ (authorization) \cite{jwt1}\cite{jwt2}
 \subsection{OAuth 2.0}
-Subsection 1 text
+OAuth 2.0 คือ Authorization Framework ที่ออกแบบมาเพื่อให้ผู้ใช้สามารถแชร์ข้อมูลของตนเองระหว่างแอปพลิเคชันต่างๆ ได้อย่างปลอดภัยโดยไม่ต้องเปิดเผยรหัสผ่านของตนเองให้กับ third-party applications \cite{oauth1}\cite{oauth2}
 
 \subsubsection{Subsubsection 1 heading goes here}
 Subsubsection 1 text
@@ -138,9 +153,9 @@ juxtaposition
 }
 
 \begin{enumerate}
-  \item ความรู้ด้าน Web development จากวิชา 261207
-  \item ความรู้ด้าน ฐานข้อมูล จากวิชา 261342
-  \item ความรู้ด้าน Deployment จากวิชา 261497
+  \item ความรู้ด้าน Web development จากวิชา 261207 Basic Computer Engineering Laboratory
+  \item ความรู้ด้าน ฐานข้อมูล จากวิชา 261342 Fundamentals of Database Systems
+  \item ความรู้ด้าน Deployment จากวิชา 261497 Full Stack Development
 \end{enumerate}
 
 \section{\ifenglish%
