@@ -47,6 +47,7 @@
 
 \bullet{ Authentication}
 เลือกใช้บริการ OAuth ของ Google และ CMU Account ในการเข้าสู่ระบบ
+\clearpage
 
 \subsection{โครงสร้างฐานข้อมูล (Database Schema)}
 Database ของระบบนี้ ประกอบไปด้วย 3 Collections ดังนี้
@@ -78,4 +79,99 @@ Database ของระบบนี้ ประกอบไปด้วย 3 C
   \item status ใช้ระบุว่าผู้ใช้ได้กดสนใจหรือไม่
 \end{itemize}
 \end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{public/db-diagram.png}
+\end{center}
+\caption[Poem]{Schema Diagram}
+\label{fig:db-schema}
+\end{figure}
+\section{ส่วนเชื่อมต่อระหว่างผู้ใช้งานกับระบบ (User Interface)}
+\subsubsection{หน้าแรก (Landing Page)}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{public/landing.jpg}
+\end{center}
+\caption[Poem]{Landing Page}
+\label{fig:landing-page}
+\end{figure}
+\clearpage
+\subsubsection{หน้าเข้าสู่ระบบ (Login Page)}
+เมื่อกดปุ่มเข้าสู่ระบบในหน้าแรก จะเปลี่ยนมาเป็นหน้านี้
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{public/login-page.jpg}
+\end{center}
+\caption[Poem]{Login Page}
+\label{fig:login-page}
+\end{figure}
+
+\subsubsection{หน้าสร้างกิจกรรม (Create Event Page)}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{public/create-act.jpg}
+\end{center}
+\caption[Poem]{Create Event Page}
+\label{fig:create-page}
+\end{figure}
+\clearpage
+\subsubsection{หน้ากิจกรรมของฉัน (Create Event Page)}
+ประกอบด้วยกิจกรรมที่สร้าง และกิจกรรมที่กดสนใจเข้าร่วม
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{public/my-act.jpg}
+\end{center}
+\caption[Poem]{My Event Page}
+\label{fig:my-event-page}
+\end{figure}
+\subsubsection{หน้าแดชบอร์ด (Dashboard Page)}
+สามารถดูสถิติโดยรวมของเว็บได้
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{public/dash-page.jpg}
+\end{center}
+\caption[Poem]{Dashboard Page}
+\label{fig:dashboard-page}
+\end{figure}
+\clearpage
+\subsubsection{รายละเอียดกิจกรรม (Event Detail)}
+จะแสดงรายละเอียดทั้งหมดของกิจกรรม
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{public/act-detail.jpg}
+\end{center}
+\caption[Poem]{Event Detail}
+\label{fig:event-detail}
+\end{figure}
+\subsubsection{รายละเอียดกิจกรรมโดยย่อ (Event Box)}
+จะแสดงรายละเอียดโดยย่อของกิจกรรม
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{public/act-mini.jpg}
+\end{center}
+\caption[Poem]{Event Box}
+\label{fig:event-box}
+\end{figure}
+\clearpage
+\subsubsection{หน้าต่างรีวิวกิจกรรม (Review Window)}
+เมื่อกดปุ่ม "กรุณาให้คะแนน" หน้าต่างรีวิวกิจกรรมจะแสดงขึ้นมา
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{public/act-review.jpg}
+\end{center}
+\caption[Poem]{Review Window}
+\label{fig:review-window}
+\end{figure}
+\subsubsection{ส่วนแสดงคะแนนกิจกรรม (Score Section)}
+ในหน้ารายละเอียดกิจกรรมของกิจกรรมที่สิ้นสุดแล้ว จะแสดงคะแนนเฉลี่ยของกิจกรรม
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics[scale=0.5]{public/act-score.jpg}}
+\end{center}
+\caption[Poem]{Review Window}
+\label{fig:score-section}
+\end{figure}
+
 
