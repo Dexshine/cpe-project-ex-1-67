@@ -2,11 +2,11 @@
 
 \section{\ifenglish Project rationale\else ที่มาของโครงงาน\fi}
 \hspace{\parindent}บุคลากรภายในมหาวิทยาลัยเชียงใหม่จำนวนมากต้องการหาคนมาเข้าร่วมกิจกรรมต่างๆ แต่ผู้เข้าร่วมมีจำนวนน้อยหรืออาจไม่มีเลย
-ซึ่งหนึ่งในเหตุผลที่ทำให้เกิดเหตุการณ์ดังกล่าวขึ้น คือ การประกาศกิจกรรมนั้นทำผ่านหลายแพลตฟอร์ม และในหนึ่งแพลตฟอร์มก็ยังแบ่งเป็นหลากหลายหน้า
+ซึ่งหนึ่งในเหตุผลที่ทำให้เกิดเหตุการณ์ดังกล่าวขึ้น คือ การประกาศกิจกรรมนั้นทำผ่านหลายแพลตฟอร์ม และในหนึ่งแพลตฟอร์มก็ยังแบ่งเป็นหลากหลายหน่วยงาน/คณะ
 ทำให้นักศึกษาและบุคลากรไม่ได้รับข่าวสารกิจกรรมทั้งหมดในมหาวิทยาลัยเชียงใหม่ 
 
 ผู้จัดทำจึงพัฒนาเว็บแอปพลิเคชันที่เป็นศูนย์กลางให้นักศึกษาและบุคลากรของมหาวิทยาลัยเชียงใหม่สามารถประกาศกิจกรรมที่กำลังจะเกิดขึ้น 
-แสดงความสนใจในการเข้าร่วมกิจกรรม และแบ่งปันรีวิวของกิจกรรมที่ผ่านมาได้
+แสดงความสนใจในการเข้าร่วมกิจกรรม และแบ่งปันคะแนนของกิจกรรมที่ผ่านมาได้
 \section{\ifenglish Objectives\else วัตถุประสงค์ของโครงงาน\fi}
 \begin{enumerate}
     \item พัฒนาเว็บแอปพลิเคชันที่นักศึกษาและบุคลากรสามารถประกาศกิจกรรมและแสดงความสนใจเข้าร่วมกิจกรรมได้
@@ -25,8 +25,8 @@
     \item มีระบบการแสดงกิจกรรมทั้งหมด
     \item มีระบบการประกาศกิจกรรม
     \item มีระบบการแสดงความสนใจเข้าร่วมกิจกรรม
-    \item มีระบบรีวิวกิจกรรม
-    \item มีแดชบอร์ดแสดงสถิติของเว็บ
+    \item มีระบบให้คะแนนกิจกรรม
+    \item มีแดชบอร์ดแสดงสถิติของเว็บแอปพลิเคชัน
 \end{enumerate}
 \subsection{\ifenglish Users scope\else ขอบเขตด้านกลุ่มผู้ใช้\fi}
 นักศึกษาและบุคลากรของมหาวิทยาลัยเชียงใหม่
@@ -43,30 +43,43 @@
 \subsection{\ifenglish Hardware technology\else เทคโนโลยีด้านฮาร์ดแวร์\fi}
 ASUS Vivobook Pro 15 : สำหรับพัฒนาเว็บแอปพลิเคชัน
 \subsection{\ifenglish Software technology\else เทคโนโลยีด้านซอฟต์แวร์\fi}
+\subsubsection{Frontend}
 \begin{enumerate}
-    \item Figma : ใช้สำหรับออกแบบ UI/UX ของเว็บแอปพลิเคชัน
-    \item Github : ใช้สำหรับการควบคุมเวอร์ชันของโค้ดและการอัพโหลดโค้ดออนไลน์
-    \item Visual Studio Code : Text Editor ใช้สำหรับเขียนโค้ด
-    \item Javascript : ภาษาโปรแกรมมิ่งสำหรับทั้ง frontend และ backend
-    \item React : Javascript Library ที่ใช้สำหรับการสร้าง UI ที่มีประสิทธิภาพและรวดเร็ว
-    \item NodeJS : เป็น Javascript Runtime ที่ใช้สำหรับทำ Server-side Javascript
-    \item MongoDB : ฐานข้อมูล NoSQL ใช้สำหรับเก็บข้อมูลของเว็บ
-    \item MongoDB Compass : เครื่องมือ GUI สำหรับจัดการและวิเคราะห์ข้อมูลใน MongoDB
-    \item Mongoose : Object Data Modeling Library ใช้กำหนดโครงสร้างข้อมูลและการทำ queries 
-    \item ExpressJS : ใช้ในการสร้าง RESTful API สำหรับ backend
-    \item Firebase : ใช้ในการเก็บรูปภาพกิจกรรม
-    \item Google Cloud : ใช้ในการสร้าง Google Account Authentication
-    \item MaterialUI : React Component Library ใช้สำหรับสร้าง UI ที่สวยงาม
-    \item Netlify, Heroku, MongoDB Atlas : ใช้สำหรับ hosting และ deployment ของ frontend, backend และ database ตามลำดับ
-    \item Postman : ใช้สำหรับทดสอบการใช้งาน API
+    \item Figma\cite{figma} : ใช้สำหรับออกแบบ UI/UX ของเว็บแอปพลิเคชัน 
+    \item Javascript\cite{javascript1} : ภาษาโปรแกรมมิ่งสำหรับทั้ง frontend และ backend
+    \item React\cite{react1} : Javascript Library ที่ใช้สำหรับการสร้าง UI ที่มีประสิทธิภาพและรวดเร็ว  
+    \item MaterialUI\cite{mui} : React Component Library ใช้สำหรับสร้าง UI ที่สวยงาม
+    
+\end{enumerate}
+\subsubsection{Backend}
+\begin{enumerate}
+    \item Postman\cite{postman} : ใช้สำหรับทดสอบการใช้งาน API
+    \item NodeJS\cite{node1} : เป็น Javascript Runtime ที่ใช้สำหรับทำ Server-side Javascript
+    \item Mongoose\cite{mongoose} : Object Data Modeling Library ใช้กำหนดโครงสร้างข้อมูลและการทำ queries 
+    \item ExpressJS\cite{express1} : ใช้ในการสร้าง RESTful API สำหรับ backend
+\end{enumerate}
+\subsubsection{Database}
+\begin{enumerate}
+    \item MongoDB\cite{mongodb} : ฐานข้อมูล NoSQL ใช้สำหรับเก็บข้อมูลของเว็บ
+    \item MongoDB Compass\cite{compass} : เครื่องมือ GUI สำหรับจัดการและวิเคราะห์ข้อมูลใน MongoDB
+\end{enumerate}
+\subsubsection{Cloud Services}
+\begin{enumerate} 
+    \item GitHub\cite{github} : ใช้สำหรับการควบคุมเวอร์ชันของโค้ดและการอัพโหลดโค้ดออนไลน์
+    \item Google Oauth\cite{google} : ใช้ในการสร้าง Google Account Authentication
+    \item Netlify\cite{netlify} : ใช้สำหรับ Deploy เว็บแอปพลิเคชั่น ฝั่ง Frontend
+    \item Heroku\cite{heroku} : ใช้สำหรับ Deploy เว็บแอปพลิเคชั่น ฝั่ง Backend
+    \item MongoDB Atlas\cite{atlas} : ใช้สำหรับ Deploy ฐานข้อมูล
+    \item Firebase\cite{firebase} : ใช้สำหรับ Deploy Object Storage ที่ใช้เก็บรูปภาพกิจกรรม
 \end{enumerate}
 \section{\ifenglish Project plan\else แผนการดำเนินงาน\fi}
 
 \begin{plan}{6}{2024}{10}{2024}
-    \planitem{6}{2024}{7}{2024}{ออกแบบฐานข้อมูล}
+    \planitem{6}{2024}{7}{2024}{พัฒนาฐานข้อมูล}
     \planitem{6}{2024}{9}{2024}{พัฒนาเว็บแอปพลิเคชัน}
     \planitem{9}{2024}{10}{2024}{ทดสอบและปรับปรุงระบบ}
     \planitem{10}{2024}{10}{2024}{เขียนรายงานและนำเสนอ}
+    \caption[แผนการดำเนินงาน]{แผนการดำเนินงาน}
 \end{plan}
 
 \section{\ifenglish Roles and responsibilities\else บทบาทและความรับผิดชอบ\fi}
