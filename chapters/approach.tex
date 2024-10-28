@@ -26,11 +26,11 @@
 \begin{center}
 \includegraphics[scale=0.6]{public/sys-overview.jpg}
 \end{center}
-\caption[Poem]{System Overview}
+\caption[ภาพรวมของระบบ]{ภาพรวมของระบบ}
 \label{fig:sys-overview}
 \end{figure}
 
-\subsection{ภาพรวมของระบบ (System Overview)}
+\subsection{ภาพรวมของระบบ}
 ภาพรวมการทำงานของระบบ จะมีส่วนประกอบหลักๆ ดังนี้
 
 \bullet{ Frontend}
@@ -49,7 +49,7 @@
 เลือกใช้บริการ OAuth ของ Google และ CMU Account ในการเข้าสู่ระบบ
 \clearpage
 
-\subsection{โครงสร้างฐานข้อมูล (Database Schema)}
+\subsection{โครงสร้างฐานข้อมูล}
 Database ของระบบนี้ ประกอบไปด้วย 3 Collections ดังนี้
 
 \begin{enumerate}
@@ -84,93 +84,115 @@ Database ของระบบนี้ ประกอบไปด้วย 3 C
 \begin{center}
 \includegraphics[scale=0.4]{public/db-diagram.png}
 \end{center}
-\caption[Poem]{Schema Diagram}
+\caption[โครงสร้างฐานข้อมูล]{โครงสร้างฐานข้อมูล}
 \label{fig:db-schema}
 \end{figure}
-\section{ส่วนเชื่อมต่อระหว่างผู้ใช้งานกับระบบ (User Interface)}
-\subsubsection{หน้าแรก (Landing Page)}
+\section{การใช้งานเว็บแอปพลิเคชัน}
+โครงงานนี้จะแบ่งผู้ใช้ออกเป็น 2 กลุ่ม ได้แก่
+\begin{enumerate}
+  \item ผู้ใช้งานทั่วไป สามารถใช้งานคุณสมบัติเหล่านี้ได้ ได้แก่
+  \begin{itemize}
+    \item ค้นหากิจกรรม
+    \item ดูรายละเอียดกิจกรรม
+  \end{itemize}
+  \item ผู้ใช้ที่เข้าสู่ระบบแล้ว ผ่าน Google Account หรือ CMU Account จะสามารถใช้งานคุณสมบัติได้เพิ่มขึ้น ได้แก่
+  \begin{itemize}
+    \item สร้างกิจกรรม
+    \item กดสนใจเข้าร่วมกิจกรรม
+    \item ให้คะแนนกิจกรรมที่สิ้นสุดแล้ว
+    \item ดูหน้าแดชบอร์ดของเว็บ
+  \end{itemize}
+\end{enumerate}
+\section{ส่วนเชื่อมต่อระหว่างผู้ใช้งานกับระบบ}
+\subsubsection{หน้าแรก}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{public/landing.jpg}
 \end{center}
-\caption[Poem]{Landing Page}
+\caption[หน้าแรก]{หน้าแรก}
 \label{fig:landing-page}
 \end{figure}
-\clearpage
-\subsubsection{หน้าเข้าสู่ระบบ (Login Page)}
+\subsubsection{หน้าเข้าสู่ระบบ}
 เมื่อกดปุ่มเข้าสู่ระบบในหน้าแรก จะเปลี่ยนมาเป็นหน้านี้
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.6]{public/login-page.jpg}
 \end{center}
-\caption[Poem]{Login Page}
+\caption[หน้าเข้าสู่ระบบ]{หน้าเข้าสู่ระบบ}
 \label{fig:login-page}
 \end{figure}
-
-\subsubsection{หน้าสร้างกิจกรรม (Create Event Page)}
+\subsubsection{หน้าเลือกประเภทกิจกรรมที่สนใจ}
+เมื่อเข้าสู่ระบบครั้งแรก ผู้ใช้จะต้องเลือกประเภทกิจกรรมที่สนใจ โดยความสนใจเหล่านี้สามารถเปลี่ยนแปลงภายหลังได้
+\begin{figure}[H]
+\begin{center}
+\fbox{\includegraphics[scale=0.5]{public/tag-choose.jpg}}
+\end{center}
+\caption[หน้าเลือกประเภทกิจกรรมที่สนใจ]{หน้าเลือกประเภทกิจกรรมที่สนใจ}
+\label{fig:tag-choose}
+\end{figure}
+\subsubsection{หน้าสร้างกิจกรรม}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.6]{public/create-act.jpg}
 \end{center}
-\caption[Poem]{Create Event Page}
+\caption[หน้าสร้างกิจกรรม]{หน้าสร้างกิจกรรม}
 \label{fig:create-page}
 \end{figure}
-\clearpage
-\subsubsection{หน้ากิจกรรมของฉัน (Create Event Page)}
+\subsubsection{หน้ากิจกรรมของฉัน}
 ประกอบด้วยกิจกรรมที่สร้าง และกิจกรรมที่กดสนใจเข้าร่วม
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{public/my-act.jpg}
+\includegraphics[scale=0.4]{public/my-act.jpg}
 \end{center}
-\caption[Poem]{My Event Page}
+\caption[หน้ากิจกรรมของฉัน]{หน้ากิจกรรมของฉัน}
 \label{fig:my-event-page}
 \end{figure}
-\subsubsection{หน้าแดชบอร์ด (Dashboard Page)}
+\subsubsection{หน้าแดชบอร์ด}
 สามารถดูสถิติโดยรวมของเว็บได้
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{public/dash-page.jpg}
 \end{center}
-\caption[Poem]{Dashboard Page}
+\caption[หน้าแดชบอร์ด]{หน้าแดชบอร์ด}
 \label{fig:dashboard-page}
 \end{figure}
 \clearpage
-\subsubsection{รายละเอียดกิจกรรม (Event Detail)}
-จะแสดงรายละเอียดทั้งหมดของกิจกรรม
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.6]{public/act-detail.jpg}
-\end{center}
-\caption[Poem]{Event Detail}
-\label{fig:event-detail}
-\end{figure}
-\subsubsection{รายละเอียดกิจกรรมโดยย่อ (Event Box)}
+\subsubsection{รายละเอียดกิจกรรมโดยย่อ}
 จะแสดงรายละเอียดโดยย่อของกิจกรรม
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.8]{public/act-mini.jpg}
 \end{center}
-\caption[Poem]{Event Box}
+\caption[รายละเอียดกิจกรรมโดยย่อ]{รายละเอียดกิจกรรมโดยย่อ}
 \label{fig:event-box}
 \end{figure}
-\clearpage
-\subsubsection{หน้าต่างรีวิวกิจกรรม (Review Window)}
-เมื่อกดปุ่ม "กรุณาให้คะแนน" หน้าต่างรีวิวกิจกรรมจะแสดงขึ้นมา
+
+\subsubsection{หน้ารายละเอียดทั้งหมดของกิจกรรม}
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.8]{public/act-review.jpg}
+\includegraphics[scale=0.5]{public/act-detail.jpg}
 \end{center}
-\caption[Poem]{Review Window}
+\caption[หน้ารายละเอียดทั้งหมดของกิจกรรม]{หน้ารายละเอียดทั้งหมดของกิจกรรม}
+\label{fig:event-detail}
+\end{figure}
+\clearpage
+\subsubsection{หน้าต่างให้คะแนนกิจกรรม}
+เมื่อกดปุ่ม "กรุณาให้คะแนน" หน้าต่างให้คะแนนกิจกรรมจะแสดงขึ้นมา
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.6]{public/act-review.jpg}
+\end{center}
+\caption[หน้าต่างให้คะแนนกิจกรรม]{หน้าต่างให้คะแนนกิจกรรม}
 \label{fig:review-window}
 \end{figure}
-\subsubsection{ส่วนแสดงคะแนนกิจกรรม (Score Section)}
+\subsubsection{ส่วนแสดงคะแนนกิจกรรม}
 ในหน้ารายละเอียดกิจกรรมของกิจกรรมที่สิ้นสุดแล้ว จะแสดงคะแนนเฉลี่ยของกิจกรรม
 \begin{figure}[H]
 \begin{center}
 \fbox{\includegraphics[scale=0.5]{public/act-score.jpg}}
 \end{center}
-\caption[Poem]{Review Window}
+\caption[ส่วนแสดงคะแนนกิจกรรม]{ส่วนแสดงคะแนนกิจกรรม}
 \label{fig:score-section}
 \end{figure}
 
